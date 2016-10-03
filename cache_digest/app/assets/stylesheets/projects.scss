@@ -1,0 +1,23 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  font-size: 20px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+li a {
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+  padding-left: 3px;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}

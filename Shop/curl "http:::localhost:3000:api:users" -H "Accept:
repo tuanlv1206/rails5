@@ -1,0 +1,4 @@
+curl "http://localhost:3000/api/users" -H "Accept: application/json" -X POST -d "user[name]=test&user[email]=test4@test.com&user[password]=test&user[password_confirmation]=test"
+
+
+curl "http://localhost:3000/api/sessions" -H "Accept: application/json" -X POST -d "session[email]=test@test.com&session[password]=test"

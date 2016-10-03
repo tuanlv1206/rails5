@@ -1,0 +1,29 @@
+<% cache "recent_articles" do %>
+  <div id="recent_articles">
+    <h3>Recent Articles</h3>
+    <ul>
+    <% @recent_articles.each do |article| %>
+      <% cache ['v1',article] do %>
+        <li><%= link_to article.name, article %></li>
+      <% end %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<div id="article">
+  <h1><%= @article.name %></h1>
+  <%= @article.content %>
+  <p>
+    <%= link_to "Edit", edit_article_path %> |
+    <%= link_to "Browse Articles", articles_path %>
+  </p>
+
+  <h2><%= pluralize(@article.cache_comments_count, "comment") %></h2>
+  <div id="comments">
+    <%= render @article.cached_comments %>
+  </div>
+  <%= render "comments/form" %>
+</div>
+
